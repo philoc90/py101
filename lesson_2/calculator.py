@@ -9,7 +9,7 @@ def invalid_number(number_str):
 
     return False
 
-prompt('Welcome to Calculator!')
+
 
 prompt("What's the first number?")
 number1 = input()
