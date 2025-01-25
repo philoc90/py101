@@ -15,7 +15,7 @@
     "first_number": "Quel est le premier numéro?",
     "invalid_number":"Hmm... cela ne ressemble pas à un numéro valide.",
     "second_number": "Quel est le deuxième numéro?",
-    "operation:": "Quelle opération souhaitez-vous réaliser?\n 1) Ajouter 2) Soustraire 3) Multiplier 4) Diviser",
+    "operation": "Quelle opération souhaitez-vous réaliser?\n1) Ajouter 2) Soustraire 3) Multiplier 4) Diviser",
     "invalid_operation": "Vous devez choisir 1, 2, 3 ou 4",
     "result": "Le résultat est ",
     "new_calc": "Souhaitez-vous effectuer un autre calcul ? (y/n)",

@@ -23,7 +23,15 @@ def invalid_number(number_str):
 
     return False
 
-# all messages are now written as "messages['key in JSON file']"
+# we need to get the user's language before we can call messages with the JSON file so this comes first
+prompt('Select language: type en for english or fr for french')
+lang = input()
+# validates input
+while lang != 'en' and lang != 'fr':
+    prompt('please type en or fr')
+    lang = input()
+# since we will only ever need one language object from here on out, we can set 'messages' to the language the user chose and not have to worry about it from here 
+messages = messages[lang]
 prompt(messages['welcome'])
 
 # to allow the user to perform another calculation, we turn the main block of code into a function called main() so that we can have it call itself at the end.
