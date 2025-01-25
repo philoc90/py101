@@ -1,13 +1,24 @@
 {
-    
-        "welcome":"Welcome to Calculator!",
-        "first_number":"What's the first number?",
-        "invalid_number":"Hmm... that doesn't look like a valid number.",
-        "second_number":"What's the second number?",
-        "operation":"What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
-        "invalid_operation":"You must choose 1, 2, 3, or 4",
-        "result":"The result is ",
-        "new_calc":"Would you like to perform another calculation? (y/n)",
-        "invalid_answer":"You must answer y or n"
-    
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "first_number": "What's the first number?",
+    "invalid_number": "Hmm... that doesn't look like a valid number.",
+    "second_number": "What's the second number?",
+    "operation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
+    "invalid_operation": "You must choose 1, 2, 3, or 4",
+    "result": "The result is ",
+    "new_calc": "Would you like to perform another calculation? (y/n)",
+    "invalid_answer": "You must answer y or n"
+  },
+  "fr": {
+    "welcome": "Bienvenue sur la calculatrice!",
+    "first_number": "Quel est le premier numéro?",
+    "invalid_number":"Hmm... cela ne ressemble pas à un numéro valide.",
+    "second_number": "Quel est le deuxième numéro?",
+    "operation:": "Quelle opération souhaitez-vous réaliser?\n 1) Ajouter 2) Soustraire 3) Multiplier 4) Diviser",
+    "invalid_operation": "Vous devez choisir 1, 2, 3 ou 4",
+    "result": "Le résultat est ",
+    "new_calc": "Souhaitez-vous effectuer un autre calcul ? (y/n)",
+    "invalid_answer": "Vous devez répondre y ou n"
+  }
 }
