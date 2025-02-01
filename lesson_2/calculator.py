@@ -15,9 +15,10 @@ with open('calculator_messages.json', 'r') as file:
 def prompt(message):
     print(f"==> {message}")
 
+# to allow floats, we replace all 'int' with float as step 1
 def invalid_number(number_str):
     try:
-        int(number_str)
+        float(number_str)
     except ValueError:
         return True
 
@@ -59,13 +60,17 @@ def main():
 
     match operation:
         case "1":
-            output = int(number1) + int(number2)
+            output = float(number1) + float(number2)
         case "2":
-            output = int(number1) - int(number2)
+            output = float(number1) - float(number2)
         case "3":
-            output = int(number1) * int(number2)
+            output = float(number1) * float(number2)
         case "4":
-            output = int(number1) / int(number2)
+            output = float(number1) / float(number2)
+    
+    # now that we've turned everything into floats, we can actually check to see if our result is a whole number with modulo 1.  If it is, we turn the float into an int to make it look nicer when printed.
+    if output % 1 == 0:
+        output = int(output)
 
     # because this message was originally formatted, and I don't know how to mix formatted strings and JSON files, I turned output from an into to a str and then concatenated it to the JSON message
     prompt(messages['result']+ str(output))
