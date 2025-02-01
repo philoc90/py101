@@ -1,6 +1,6 @@
 def invalid_amount(amount):
     try:
-        if float(amount) >= 0:
+        if float(amount) > 0:
             return False
         return True
     except ValueError:
@@ -15,6 +15,15 @@ def invalid_duration(duration):
     if int(duration) % 1 == 0 and int(duration) > 0:
         return False
     return True
+
+
+def invalid_apr(apr):
+    try:
+        if float(apr) >= 0:
+            return False
+        return True
+    except ValueError:
+        return True
 
 
 def calculate_payment(apr, loan_amount, number_of_months):
@@ -40,8 +49,8 @@ def main():
         loan_amount = input("Please input a positive number:$")
 
     apr = input("Please input the APR:%")
-    while invalid_amount(apr):
-        apr = input("Please input a positive APR:%")
+    while invalid_apr(apr):
+        apr = input("Please input a non-negative APR:%")
 
     number_of_months = input("Please input the loan's duration in months: ")
     while invalid_duration(number_of_months):
@@ -49,9 +58,10 @@ def main():
 
     monthly_payment = calculate_payment(apr, loan_amount, number_of_months)
 
-    print(f"Your monthly payment is {monthly_payment:.2f}.")
+    print(f"Your monthly payment is ${monthly_payment:.2f}.")
     print(
-        "Would you like to perform another calculation?  Enter y for yes, or anything else to exit."
+        "Would you like to perform another calculation?  Enter y for yes, or \
+            anything else to exit."
     )
     answer = input().lower()
     if answer == "y":
