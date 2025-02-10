@@ -6,9 +6,26 @@
 
 
 def print_in_box(message, max_length=-1):
-    print("+--" + ("-" * len(message[0:max_length])) + "+")
-    print("| " + (" ")* len(message[0:max_length]) + " |")
-    print(f"| {message[0:max_length]} |")
-    print("| " + (" ")* len(message[0:max_length]) + " |")
-    print("+--" + ("-" * len(message[0:max_length])) + "+")
-print_in_box('To boldly go where no one has gone before.')
+    first_and_last_lines = "+--" + ("-" * len(message[0:max_length])) + "+"
+    second_and_fourth_lines = "| " + (" ") * len(message[0:max_length]) + " |"
+    third_line = f"| {message[0:max_length]} |"
+
+    print(first_and_last_lines)
+    print(second_and_fourth_lines)
+    print(third_line)
+
+    characters_left = len(message) - max_length
+    lines_printed = 1
+
+    while characters_left > 0:
+        print(
+            f"| {message[max_length * lines_printed: max_length * (lines_printed +1)]} |"
+        )
+        lines_printed += 1
+        characters_left -= max_length
+
+    print(second_and_fourth_lines)
+    print(first_and_last_lines)
+
+
+print_in_box("To boldly go where no one has gone before.", 3)
